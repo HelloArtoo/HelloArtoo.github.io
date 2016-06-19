@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-06-19T13:33:21.107Z</updated>
+  <updated>2016-06-19T14:36:45.107Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,22 +16,34 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>那么多美好，总要有个地方记录一下</title>
+    <title>用markdown的语法写博客</title>
     <link href="http://yoursite.com/2016/06/19/%E9%82%A3%E4%B9%88%E5%A4%9A%E7%BE%8E%E5%A5%BD%EF%BC%8C%E6%80%BB%E8%A6%81%E6%9C%89%E4%B8%AA%E5%9C%B0%E6%96%B9%E8%AE%B0%E5%BD%95%E4%B8%80%E4%B8%8B/"/>
     <id>http://yoursite.com/2016/06/19/那么多美好，总要有个地方记录一下/</id>
     <published>2016-06-19T13:31:06.000Z</published>
-    <updated>2016-06-19T13:33:21.107Z</updated>
+    <updated>2016-06-19T14:36:45.107Z</updated>
     
-    <content type="html">&lt;p&gt;时间跑的再快点，我就追不上了…&lt;/p&gt;
-</content>
+    <content type="html">&lt;h2 id=&quot;写blog啦。&quot;&gt;&lt;a href=&quot;#写blog啦。&quot; class=&quot;headerlink&quot; title=&quot;写blog啦。&quot;&gt;&lt;/a&gt;写blog啦。&lt;/h2&gt;&lt;h2 id=&quot;在-HTML-文件中，有两个字符需要特殊处理：-lt-和-amp-。-lt-符号用于起始标签，-amp-符号则用于标记-HTML-实体，如果你只是想要显示这些字符的原型，你必须要使用实体的形式，像是-lt-和-amp-。&quot;&gt;&lt;a href=&quot;#在-HTML-文件中，有两个字符需要特殊处理：-lt-和-amp-。-lt-符号用于起始标签，-amp-符号则用于标记-HTML-实体，如果你只是想要显示这些字符的原型，你必须要使用实体的形式，像是-lt-和-amp-。&quot; class=&quot;headerlink&quot; title=&quot;在 HTML 文件中，有两个字符需要特殊处理： &amp;lt; 和 &amp;amp; 。 &amp;lt; 符号用于起始标签，&amp;amp; 符号则用于标记 HTML 实体，如果你只是想要显示这些字符的原型，你必须要使用实体的形式，像是 &amp;lt; 和 &amp;amp;。&quot;&gt;&lt;/a&gt;在 HTML 文件中，有两个字符需要特殊处理： &amp;lt; 和 &amp;amp; 。 &amp;lt; 符号用于起始标签，&amp;amp; 符号则用于标记 HTML 实体，如果你只是想要显示这些字符的原型，你必须要使用实体的形式，像是 &amp;lt; 和 &amp;amp;。&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;http://news.likeiii.com/uploadfile/2014/0311/20140311094802333.jpg&quot; alt=&quot;Teddy是只猫&quot;&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;img&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;src&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;http://news.likeiii.com/uploadfile/2014/0311/20140311094802333.jpg&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;border&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;0&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;table标签&quot;&gt;&lt;a href=&quot;#table标签&quot; class=&quot;headerlink&quot; title=&quot;table标签&quot;&gt;&lt;/a&gt;table标签&lt;/h2&gt;&lt;p&gt;&lt;table&gt;&lt;br&gt;    &lt;tr&gt;&lt;br&gt;        &lt;td&gt;Foo&lt;/td&gt;&lt;br&gt;    &lt;/tr&gt;&lt;br&gt;&lt;/table&gt;&lt;/p&gt;
+&lt;h1 id=&quot;测试下标题&quot;&gt;&lt;a href=&quot;#测试下标题&quot; class=&quot;headerlink&quot; title=&quot;测试下标题&quot;&gt;&lt;/a&gt;测试下标题&lt;/h1&gt;&lt;p&gt;Markdown 支持两种标题的语法，类 Setext 和类 atx 形式。&lt;/p&gt;
+&lt;p&gt;类 Setext 形式是用底线的形式，利用 = （最高阶标题）和 - （第二阶标题），例如：&lt;/p&gt;
+&lt;h2 id=&quot;区块引用-Blockquotes&quot;&gt;&lt;a href=&quot;#区块引用-Blockquotes&quot; class=&quot;headerlink&quot; title=&quot;区块引用 Blockquotes&quot;&gt;&lt;/a&gt;区块引用 Blockquotes&lt;/h2&gt;&lt;p&gt;Markdown 标记区块引用是使用类似 email 中用 &amp;gt; 的引用方式。如果你还熟悉在 email 信件中的引言部分，你就知道怎么在 Markdown 文件中建立一个区块引用，那会看起来像是你自己先断好行，然后在每行的最前面加上 &amp;gt; ：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,&lt;br&gt;consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.&lt;br&gt;Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.&lt;/p&gt;
+&lt;p&gt;Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse&lt;br&gt;id sem consectetuer libero luctus adipiscing.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;有序列表&quot;&gt;&lt;a href=&quot;#有序列表&quot; class=&quot;headerlink&quot; title=&quot;有序列表&quot;&gt;&lt;/a&gt;有序列表&lt;/h2&gt;&lt;ol&gt;&lt;br&gt;&lt;li&gt;Bird&lt;/li&gt;&lt;br&gt;&lt;li&gt;McHale&lt;/li&gt;&lt;br&gt;&lt;li&gt;Parish&lt;/li&gt;&lt;br&gt;&lt;/ol&gt;
+
+&lt;h2 id=&quot;代码&quot;&gt;&lt;a href=&quot;#代码&quot; class=&quot;headerlink&quot; title=&quot;代码&quot;&gt;&lt;/a&gt;代码&lt;/h2&gt;&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;ol&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;li&lt;/span&gt;&amp;gt;&lt;/span&gt;Bird&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;li&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;li&lt;/span&gt;&amp;gt;&lt;/span&gt;McHale&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;li&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;li&lt;/span&gt;&amp;gt;&lt;/span&gt;Parish&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;li&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;ol&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
     
     <summary type="html">
     
-      &lt;p&gt;时间跑的再快点，我就追不上了…&lt;/p&gt;
-
+      &lt;h2 id=&quot;写blog啦。&quot;&gt;&lt;a href=&quot;#写blog啦。&quot; class=&quot;headerlink&quot; title=&quot;写blog啦。&quot;&gt;&lt;/a&gt;写blog啦。&lt;/h2&gt;&lt;h2 id=&quot;在-HTML-文件中，有两个字符需要特殊处理：-lt-和-amp-。-lt-符号用于起始标
     
     </summary>
     
+    
+      <category term="markdown" scheme="http://yoursite.com/tags/markdown/"/>
     
   </entry>
   
