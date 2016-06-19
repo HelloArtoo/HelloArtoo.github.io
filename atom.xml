@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-06-19T14:36:45.107Z</updated>
+  <updated>2016-06-19T14:38:58.205Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2016/06/19/%E9%82%A3%E4%B9%88%E5%A4%9A%E7%BE%8E%E5%A5%BD%EF%BC%8C%E6%80%BB%E8%A6%81%E6%9C%89%E4%B8%AA%E5%9C%B0%E6%96%B9%E8%AE%B0%E5%BD%95%E4%B8%80%E4%B8%8B/"/>
     <id>http://yoursite.com/2016/06/19/那么多美好，总要有个地方记录一下/</id>
     <published>2016-06-19T13:31:06.000Z</published>
-    <updated>2016-06-19T14:36:45.107Z</updated>
+    <updated>2016-06-19T14:38:58.205Z</updated>
     
     <content type="html">&lt;h2 id=&quot;写blog啦。&quot;&gt;&lt;a href=&quot;#写blog啦。&quot; class=&quot;headerlink&quot; title=&quot;写blog啦。&quot;&gt;&lt;/a&gt;写blog啦。&lt;/h2&gt;&lt;h2 id=&quot;在-HTML-文件中，有两个字符需要特殊处理：-lt-和-amp-。-lt-符号用于起始标签，-amp-符号则用于标记-HTML-实体，如果你只是想要显示这些字符的原型，你必须要使用实体的形式，像是-lt-和-amp-。&quot;&gt;&lt;a href=&quot;#在-HTML-文件中，有两个字符需要特殊处理：-lt-和-amp-。-lt-符号用于起始标签，-amp-符号则用于标记-HTML-实体，如果你只是想要显示这些字符的原型，你必须要使用实体的形式，像是-lt-和-amp-。&quot; class=&quot;headerlink&quot; title=&quot;在 HTML 文件中，有两个字符需要特殊处理： &amp;lt; 和 &amp;amp; 。 &amp;lt; 符号用于起始标签，&amp;amp; 符号则用于标记 HTML 实体，如果你只是想要显示这些字符的原型，你必须要使用实体的形式，像是 &amp;lt; 和 &amp;amp;。&quot;&gt;&lt;/a&gt;在 HTML 文件中，有两个字符需要特殊处理： &amp;lt; 和 &amp;amp; 。 &amp;lt; 符号用于起始标签，&amp;amp; 符号则用于标记 HTML 实体，如果你只是想要显示这些字符的原型，你必须要使用实体的形式，像是 &amp;lt; 和 &amp;amp;。&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;http://news.likeiii.com/uploadfile/2014/0311/20140311094802333.jpg&quot; alt=&quot;Teddy是只猫&quot;&gt;&lt;/p&gt;
 &lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;img&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;src&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;http://news.likeiii.com/uploadfile/2014/0311/20140311094802333.jpg&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;border&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;0&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
@@ -41,6 +41,8 @@
       &lt;h2 id=&quot;写blog啦。&quot;&gt;&lt;a href=&quot;#写blog啦。&quot; class=&quot;headerlink&quot; title=&quot;写blog啦。&quot;&gt;&lt;/a&gt;写blog啦。&lt;/h2&gt;&lt;h2 id=&quot;在-HTML-文件中，有两个字符需要特殊处理：-lt-和-amp-。-lt-符号用于起始标
     
     </summary>
+    
+      <category term="Teddy" scheme="http://yoursite.com/categories/Teddy/"/>
     
     
       <category term="markdown" scheme="http://yoursite.com/tags/markdown/"/>
