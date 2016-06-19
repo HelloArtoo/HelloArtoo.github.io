@@ -1,19 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>土哥哥的大博客</title>
-  <subtitle>Artoo</subtitle>
+  <title>Nurture Passes Nature</title>
+  <subtitle>阿土猪</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-06-19T01:02:18.132Z</updated>
+  <updated>2016-06-19T13:33:21.107Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
-    <name>Artoo</name>
+    <name>今夜无人入睡</name>
     
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>那么多美好，总要有个地方记录一下</title>
+    <link href="http://yoursite.com/2016/06/19/%E9%82%A3%E4%B9%88%E5%A4%9A%E7%BE%8E%E5%A5%BD%EF%BC%8C%E6%80%BB%E8%A6%81%E6%9C%89%E4%B8%AA%E5%9C%B0%E6%96%B9%E8%AE%B0%E5%BD%95%E4%B8%80%E4%B8%8B/"/>
+    <id>http://yoursite.com/2016/06/19/那么多美好，总要有个地方记录一下/</id>
+    <published>2016-06-19T13:31:06.000Z</published>
+    <updated>2016-06-19T13:33:21.107Z</updated>
+    
+    <content type="html">&lt;p&gt;时间跑的再快点，我就追不上了…&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;时间跑的再快点，我就追不上了…&lt;/p&gt;
+
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
