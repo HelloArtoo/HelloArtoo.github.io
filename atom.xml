@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Nurture Passes Nature</title>
-  <subtitle>阿土猪</subtitle>
+  <title>Go Bue !</title>
+  <subtitle>nurture passes nature</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
@@ -9,7 +9,7 @@
   <id>http://yoursite.com/</id>
   
   <author>
-    <name>今夜无人入睡</name>
+    <name>nurture passes nature.</name>
     
   </author>
   
