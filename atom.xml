@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-06-21T14:40:02.919Z</updated>
+  <updated>2016-06-23T14:00:04.730Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,11 +16,55 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>MarkdownPad工具写GitHub博客</title>
+    <link href="http://yoursite.com/2016/06/23/MarkdownPad%E5%B7%A5%E5%85%B7%E5%86%99GitHub%E5%8D%9A%E5%AE%A2/"/>
+    <id>http://yoursite.com/2016/06/23/MarkdownPad工具写GitHub博客/</id>
+    <published>2016-06-23T13:50:06.000Z</published>
+    <updated>2016-06-23T14:00:04.730Z</updated>
+    
+    <content type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt;&lt;p&gt;用markdown写博客纯文本编辑也不是很方便，可以利用&lt;code&gt;MarkdownPad&lt;/code&gt;进行可视化编辑。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;版本下载&quot;&gt;&lt;a href=&quot;#版本下载&quot; class=&quot;headerlink&quot; title=&quot;版本下载&quot;&gt;&lt;/a&gt;版本下载&lt;/h2&gt;&lt;p&gt;Markdownpad2  &lt;a href=&quot;http://markdownpad.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;download&lt;/a&gt;&lt;br&gt;直接官网下载免费版本。&lt;/p&gt;
+&lt;img src=&quot;http://markdownpad.com/img/markdownpad2.png&quot; class=&quot;full-image&quot; alt=&quot;MarkdownPad 2&quot; title=&quot;MarkdownPad 2&quot;&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h2 id=&quot;Pro-激活&quot;&gt;&lt;a href=&quot;#Pro-激活&quot; class=&quot;headerlink&quot; title=&quot;Pro 激活&quot;&gt;&lt;/a&gt;Pro 激活&lt;/h2&gt;&lt;p&gt;pro版本功能会更加丰富，还是升级Pro吧，下面给个目前可用的注册码。&lt;/p&gt;
+&lt;pre&gt;
+邮箱：
+Soar360@live.com
+授权秘钥：
+GBPduHjWfJU1mZqcPM3BikjYKF6xKhlKIys3i1MU2eJHqWGImDHzWdD6xhMNLGVpbP2M5SN6bnxn2kSE8qHqNY5QaaRxmO3YSMHxlv2EYpjdwLcPwfeTG7kUdnhKE0vVy4RidP6Y2wZ0q74f47fzsZo45JE2hfQBFi2O9Jldjp1mW8HUpTtLA2a5/sQytXJUQl/QKO0jUQY4pa5CCx20sV1ClOTZtAGngSOJtIOFXK599sBr5aIEFyH0K7H4BoNMiiDMnxt1rD8Vb/ikJdhGMMQr0R4B+L3nWU97eaVPTRKfWGDE8/eAgKzpGwrQQoDh+nzX1xoVQ8NAuH+s4UcSeQ==
+&lt;/pre&gt;
+
+&lt;p&gt;网上也有绿色版本，可利用网盘搜索查找资源。&lt;/p&gt;
+&lt;h2 id=&quot;Github-版的高亮&quot;&gt;&lt;a href=&quot;#Github-版的高亮&quot; class=&quot;headerlink&quot; title=&quot;Github 版的高亮&quot;&gt;&lt;/a&gt;Github 版的高亮&lt;/h2&gt;&lt;p&gt;MarkdownPad默认的Processor和Github的还不太一样，&lt;/p&gt;
+&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;```html&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;h6&lt;/span&gt;&amp;gt;&lt;/span&gt;Github 风格的代码高亮，支持按照编程语言进行高亮显示。&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;h6&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;```&lt;/p&gt;
+&lt;p&gt;所以咱们需要设置下Processor。&lt;/p&gt;
+&lt;ol&gt;&lt;br&gt;&lt;li&gt;&lt;code&gt;Tools&lt;/code&gt; -&amp;gt; &lt;code&gt;Options&lt;/code&gt; (工具 -&amp;gt; 选项)&lt;/li&gt;&lt;br&gt;&lt;li&gt;左侧栏选择 &lt;code&gt;Markdown&lt;/code&gt;&lt;/li&gt;&lt;br&gt;&lt;li&gt;&lt;code&gt;Markdown Processor&lt;/code&gt;下拉选择, &lt;code&gt;GitHub Flavored Markdown&lt;/code&gt;&lt;/li&gt;&lt;br&gt;&lt;li&gt;&lt;code&gt;Save and Close&lt;/code&gt;&lt;/li&gt;&lt;br&gt;&lt;/ol&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;blockquote class=&quot;blockquote-center&quot;&gt;&lt;p&gt;用markdown写博客纯文本编辑也不是很方便，可以利用&lt;code&gt;MarkdownPad&lt;/code&gt;进行可视化编辑。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;版本下载&quot;&gt;&lt;a href=&quot;#版本下载&quot; class=&quot;headerlink&quot; title=&quot;版本下载&quot;&gt;&lt;/a&gt;版本下载&lt;/h2&gt;&lt;p&gt;Markdownpad2  &lt;a href=&quot;http://markdownpad.com/&quot;&gt;download&lt;/a&gt;&lt;br&gt;直接官网下载免费版本。&lt;/p&gt;
+&lt;img src=&quot;http://markdownpad.com/img/markdownpad2.png&quot; class=&quot;full-image&quot; alt=&quot;MarkdownPad 2&quot; title=&quot;MarkdownPad 2&quot; /&gt;
+    
+    </summary>
+    
+      <category term="初写博客" scheme="http://yoursite.com/categories/%E5%88%9D%E5%86%99%E5%8D%9A%E5%AE%A2/"/>
+    
+    
+      <category term="Markdown" scheme="http://yoursite.com/tags/Markdown/"/>
+    
+  </entry>
+  
+  <entry>
     <title>用markdown的语法写博客</title>
-    <link href="http://yoursite.com/2016/06/19/%E9%82%A3%E4%B9%88%E5%A4%9A%E7%BE%8E%E5%A5%BD%EF%BC%8C%E6%80%BB%E8%A6%81%E6%9C%89%E4%B8%AA%E5%9C%B0%E6%96%B9%E8%AE%B0%E5%BD%95%E4%B8%80%E4%B8%8B/"/>
-    <id>http://yoursite.com/2016/06/19/那么多美好，总要有个地方记录一下/</id>
+    <link href="http://yoursite.com/2016/06/19/%E7%94%A8markdown%E7%9A%84%E8%AF%AD%E6%B3%95%E5%86%99%E5%8D%9A%E5%AE%A2/"/>
+    <id>http://yoursite.com/2016/06/19/用markdown的语法写博客/</id>
     <published>2016-06-19T13:31:06.000Z</published>
-    <updated>2016-06-21T14:40:02.919Z</updated>
+    <updated>2016-06-23T13:53:23.991Z</updated>
     
     <content type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt;&lt;p&gt;Markdown语法和Next主题写博客&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -33,6 +77,11 @@
 &lt;h2 id=&quot;table标签&quot;&gt;&lt;a href=&quot;#table标签&quot; class=&quot;headerlink&quot; title=&quot;table标签&quot;&gt;&lt;/a&gt;table标签&lt;/h2&gt;&lt;table&gt;&lt;br&gt;    &lt;tr&gt;&lt;br&gt;        &lt;td&gt;Foo&lt;/td&gt;&lt;br&gt;    &lt;/tr&gt;&lt;br&gt;&lt;/table&gt;
 
 &lt;h2 id=&quot;符号转换&quot;&gt;&lt;a href=&quot;#符号转换&quot; class=&quot;headerlink&quot; title=&quot;符号转换&quot;&gt;&lt;/a&gt;符号转换&lt;/h2&gt;&lt;p&gt;在 HTML 文件中，有两个字符需要特殊处理： &amp;lt; 和 &amp;amp; 。 &amp;lt; 符号用于起始标签，&amp;amp; 符号则用于标记 HTML 实体，如果你只是想要显示这些字符的原型，你必须要使用实体的形式，像是 &amp;lt; 和 &amp;amp;。&lt;/p&gt;
+&lt;h2 id=&quot;字体强调&quot;&gt;&lt;a href=&quot;#字体强调&quot; class=&quot;headerlink&quot; title=&quot;字体强调&quot;&gt;&lt;/a&gt;字体强调&lt;/h2&gt;&lt;pre&gt;
+*斜体强调*
+**粗体强调**
+&lt;/pre&gt;
+
 &lt;h2 id=&quot;标题&quot;&gt;&lt;a href=&quot;#标题&quot; class=&quot;headerlink&quot; title=&quot;标题&quot;&gt;&lt;/a&gt;标题&lt;/h2&gt;&lt;p&gt;Markdown 支持两种标题的语法，类 Setext 和类 atx 形式。&lt;br&gt;类 Setext 形式是用底线的形式，利用 = （最高阶标题）和 - （第二阶标题），例如：&lt;/p&gt;
 &lt;h2 id=&quot;区块引用-Blockquotes&quot;&gt;&lt;a href=&quot;#区块引用-Blockquotes&quot; class=&quot;headerlink&quot; title=&quot;区块引用 Blockquotes&quot;&gt;&lt;/a&gt;区块引用 Blockquotes&lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;Markdown 标记区块引用是使用类似 email 中用 &amp;gt; 的引用方式。&lt;br&gt;如果你还熟悉在 email 信件中的引言部分，你就知道怎么在 Markdown 文件中建立一个区块引用&lt;br&gt;那会看起来像是你自己先断好行，然后在每行的最前面加上 &amp;gt; ：&lt;/p&gt;
@@ -50,7 +99,7 @@
     
     </summary>
     
-      <category term="Teddy" scheme="http://yoursite.com/categories/Teddy/"/>
+      <category term="初写博客" scheme="http://yoursite.com/categories/%E5%88%9D%E5%86%99%E5%8D%9A%E5%AE%A2/"/>
     
     
       <category term="markdown" scheme="http://yoursite.com/tags/markdown/"/>
