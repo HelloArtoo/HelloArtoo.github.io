@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-06-23T14:00:04.730Z</updated>
+  <updated>2016-06-23T14:19:55.864Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2016/06/23/MarkdownPad%E5%B7%A5%E5%85%B7%E5%86%99GitHub%E5%8D%9A%E5%AE%A2/"/>
     <id>http://yoursite.com/2016/06/23/MarkdownPad工具写GitHub博客/</id>
     <published>2016-06-23T13:50:06.000Z</published>
-    <updated>2016-06-23T14:00:04.730Z</updated>
+    <updated>2016-06-23T14:19:55.864Z</updated>
     
     <content type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt;&lt;p&gt;用markdown写博客纯文本编辑也不是很方便，可以利用&lt;code&gt;MarkdownPad&lt;/code&gt;进行可视化编辑。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -37,9 +37,10 @@ GBPduHjWfJU1mZqcPM3BikjYKF6xKhlKIys3i1MU2eJHqWGImDHzWdD6xhMNLGVpbP2M5SN6bnxn2kSE
 
 &lt;p&gt;网上也有绿色版本，可利用网盘搜索查找资源。&lt;/p&gt;
 &lt;h2 id=&quot;Github-版的高亮&quot;&gt;&lt;a href=&quot;#Github-版的高亮&quot; class=&quot;headerlink&quot; title=&quot;Github 版的高亮&quot;&gt;&lt;/a&gt;Github 版的高亮&lt;/h2&gt;&lt;p&gt;MarkdownPad默认的Processor和Github的还不太一样，&lt;/p&gt;
-&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;```html&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;h6&lt;/span&gt;&amp;gt;&lt;/span&gt;Github 风格的代码高亮，支持按照编程语言进行高亮显示。&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;h6&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;```&lt;/p&gt;
-&lt;p&gt;所以咱们需要设置下Processor。&lt;/p&gt;
+&lt;p&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;Github 风格的代码高亮，支持按照编程语言进行高亮显示，所以咱们需要设置下Processor。&lt;/p&gt;
 &lt;ol&gt;&lt;br&gt;&lt;li&gt;&lt;code&gt;Tools&lt;/code&gt; -&amp;gt; &lt;code&gt;Options&lt;/code&gt; (工具 -&amp;gt; 选项)&lt;/li&gt;&lt;br&gt;&lt;li&gt;左侧栏选择 &lt;code&gt;Markdown&lt;/code&gt;&lt;/li&gt;&lt;br&gt;&lt;li&gt;&lt;code&gt;Markdown Processor&lt;/code&gt;下拉选择, &lt;code&gt;GitHub Flavored Markdown&lt;/code&gt;&lt;/li&gt;&lt;br&gt;&lt;li&gt;&lt;code&gt;Save and Close&lt;/code&gt;&lt;/li&gt;&lt;br&gt;&lt;/ol&gt;
 </content>
     
