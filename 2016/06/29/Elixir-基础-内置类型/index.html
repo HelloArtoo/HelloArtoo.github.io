@@ -1,0 +1,885 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Elixir," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Go Bue !" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="Elixir内置类型有：
+
+值类型
+任意大小的整数
+浮点数
+原子
+区间
+正则表达式
+
+
+系统类型
+PID和端口
+引用
+
+
+集合类型
+元组
+列表
+散列表
+二进制 
+
+
+
+Elixir里其实 函数 也是类型。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Elixir-基础-内置类型">
+<meta property="og:url" content="http://yoursite.com/2016/06/29/Elixir-基础-内置类型/index.html">
+<meta property="og:site_name" content="Go Bue !">
+<meta property="og:description" content="Elixir内置类型有：
+
+值类型
+任意大小的整数
+浮点数
+原子
+区间
+正则表达式
+
+
+系统类型
+PID和端口
+引用
+
+
+集合类型
+元组
+列表
+散列表
+二进制 
+
+
+
+Elixir里其实 函数 也是类型。">
+<meta property="og:updated_time" content="2016-06-29T13:10:06.321Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Elixir-基础-内置类型">
+<meta name="twitter:description" content="Elixir内置类型有：
+
+值类型
+任意大小的整数
+浮点数
+原子
+区间
+正则表达式
+
+
+系统类型
+PID和端口
+引用
+
+
+集合类型
+元组
+列表
+散列表
+二进制 
+
+
+
+Elixir里其实 函数 也是类型。">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 6298255796677379000,
+      author: '博主大人'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/06/29/Elixir-基础-内置类型/"/>
+
+  <title> Elixir-基础-内置类型 | Go Bue !  技术博客，日常生活记录。</title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Go Bue !</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">You are what you do.</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Elixir-基础-内置类型
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-06-29T21:05:23+08:00" content="2016-06-29">
+              2016-06-29
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Elixir/" itemprop="url" rel="index">
+                    <span itemprop="name">Elixir</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/06/29/Elixir-基础-内置类型/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/29/Elixir-基础-内置类型/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+              &nbsp; | &nbsp;
+              <span class="page-pv">阅读次数
+              <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+              </span>
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><code>Elixir</code>内置类型有：</p>
+<ul>
+<li>值类型<ul>
+<li>任意大小的整数</li>
+<li>浮点数</li>
+<li>原子</li>
+<li>区间</li>
+<li>正则表达式</li>
+</ul>
+</li>
+<li>系统类型<ul>
+<li>PID和端口</li>
+<li>引用</li>
+</ul>
+</li>
+<li>集合类型<ul>
+<li>元组</li>
+<li>列表</li>
+<li>散列表</li>
+<li>二进制 </li>
+</ul>
+</li>
+</ul>
+<p><code>Elixir</code>里其实 <strong>函数</strong> 也是类型。<br><a id="more"></a></p>
+<h2 id="值类型"><a href="#值类型" class="headerlink" title="值类型"></a>值类型</h2><h3 id="整数"><a href="#整数" class="headerlink" title="整数"></a>整数</h3><p>整数字面量可被写作十进制（1234），十六进制（0xcafe），八进制（0o765）和二进制（0b1010）。</p>
+<p>数值较大的时候可以用下划线分组。</p>
+<blockquote>
+<p>1_000_000<br>等同于：1000000</p>
+</blockquote>
+<h3 id="浮点数"><a href="#浮点数" class="headerlink" title="浮点数"></a>浮点数</h3><p>浮点数使用含小数点的十进制表示，小数点前后必须有一位数字，结尾指数可选。</p>
+<blockquote>
+<p>1.0<br>0.2456<br>0.314159el<br>314159.0e-5</p>
+</blockquote>
+<p>符合<code>IEEE754</code>标准双精度表示，拥有16位精度，指数最大达到10^308。</p>
+<h3 id="原子"><a href="#原子" class="headerlink" title="原子"></a>原子</h3><p><strong>常量</strong>，用来表示某些东西的名字。以（：）开头，随后跟着一个原子单词或者<code>Elixir</code>运算符。<br>（原子的名字就是它的值，俩个同名原子总是相等的。）</p>
+<blockquote>
+<p>:ok<br>:is_binary?<br>:var@2<br>:&lt;&gt;<br>:===<br>:”func/3”<br>:”long john silver”</p>
+</blockquote>
+<h3 id="区间"><a href="#区间" class="headerlink" title="区间"></a>区间</h3><p>区间被表示为，<code>开始</code>-<code>结束</code>，开始结束可以是任意值类型。但是如果你想遍历区间，两端必须是整数。</p>
+<blockquote>
+<p>1..10</p>
+</blockquote>
+<h3 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h3><p><code>Elixir</code>支持正则表达式，写作~r{regexp}或者~r{regexp}opts，{和}作为分隔符。<br>可用<code>Regex</code>模块操作正则表达式。<br><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">iex&gt;Regex.run ~r&#123;[aeiou]&#125;, <span class="string">"caterpillar"</span></span><br><span class="line">[<span class="string">"a"</span>]</span><br></pre></td></tr></table></figure></p>
+<h2 id="系统类型"><a href="#系统类型" class="headerlink" title="系统类型"></a>系统类型</h2><h3 id="PID和端口"><a href="#PID和端口" class="headerlink" title="PID和端口"></a>PID和端口</h3><p><code>PID</code>是本地或者远程的进程的引用。（当前PID值可以通过self获得。）<br>端口是读/写资源的引用。</p>
+<h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><p><strong>make_ref</strong> 函数用于创建全局唯一的引用。</p>
+<h2 id="集合类型"><a href="#集合类型" class="headerlink" title="集合类型"></a>集合类型</h2><h3 id="元组"><a href="#元组" class="headerlink" title="元组"></a>元组</h3><p>表示一组有序元素的集合。<br>一对花口号内，元素用逗号隔开。</p>
+<blockquote>
+<p>{1, 2}<br>{:ok, 42, “next”}<br>{:error, :enoent}</p>
+</blockquote>
+<h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3><p>元组，更像是通常意义上的数组。<br>而列表是一种链式的数据结构，或者我们可以直接称之为链表。<br>列表适合线性遍历，随机访问会很费时。</p>
+<p>列表有一些方便的运算符：</p>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">iex&gt; [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>] ++ [<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>] <span class="comment">#链接</span></span><br><span class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>]</span><br><span class="line">iex&gt; [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>] -- [<span class="number">1</span>, <span class="number">2</span>] <span class="comment">#差集</span></span><br><span class="line">[<span class="number">3</span>]</span><br><span class="line">iex&gt; <span class="number">1</span> <span class="keyword">in</span> [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>] <span class="comment">#属于</span></span><br><span class="line"><span class="keyword">true</span></span><br></pre></td></tr></table></figure>
+<h3 id="关键字列表"><a href="#关键字列表" class="headerlink" title="关键字列表"></a>关键字列表</h3><p>因为我们常常需要一组键值对，<code>Elixir</code>提供了一种简写方式。</p>
+<blockquote>
+<p>[name: “Dave”, city: “Dallas”, age: “28”]</p>
+</blockquote>
+<p><code>Elixir</code>将其转换成一个由双值元组组成的列表：</p>
+<blockquote>
+<p>[{name: “Dave”}, {city: “Dallas”}, {age: “28”}]</p>
+</blockquote>
+<p>另，当关键字列表作为函数调用最后一个参数时，允许省略方括号。</p>
+<blockquote>
+<p>Db.save record, {name: “Dave”}, {city: “Dallas”}</p>
+</blockquote>
+<h3 id="散列表"><a href="#散列表" class="headerlink" title="散列表"></a>散列表</h3><p>一组键值对的集合，格式：</p>
+<blockquote>
+<p>%{key =&gt; value, key =&gt; value}</p>
+</blockquote>
+<p>为何既有散列表又有关键字列表呢。散列表的键 <strong>不能相同</strong>，而关键字列表允许存在重复的键。散列表更高效，尤其在数量不断增加的时候。</p>
+<p>访问数据：<br><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">iex&gt; states = %&#123;<span class="string">"AL"</span> =&gt; <span class="string">"Alabama"</span>, <span class="string">"WI"</span> =&gt; <span class="string">"Wisconsin"</span>&#125;</span><br><span class="line">%&#123;<span class="string">"AL"</span> =&gt; <span class="string">"Alabama"</span>, <span class="string">"WI"</span> =&gt; <span class="string">"Wisconsin"</span>&#125;</span><br><span class="line">iex&gt; states[<span class="string">"AL"</span>]</span><br><span class="line"><span class="string">"Alabama"</span></span><br></pre></td></tr></table></figure></p>
+<p>如果是原子类型，可以使用点符号</p>
+<blockquote>
+<p>#:green<br>colors.green </p>
+</blockquote>
+<h3 id="二进制"><a href="#二进制" class="headerlink" title="二进制"></a>二进制</h3><p>有时候你需要访问你的数据是一个位，或者字节。<br>例如JPEG 和 MP3 文件头部包含一些字段，可能在单个字节内放置两到三个值。<br>二进制写法：&lt;&lt; 和 &gt;&gt; 之间。<br><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">iex&gt; bin = &lt;&lt;<span class="number">1</span>, <span class="number">2</span>&gt;&gt;</span><br><span class="line">&lt;&lt;<span class="number">1</span>, <span class="number">2</span>&gt;&gt;</span><br><span class="line">iex&gt; byte_size bin</span><br><span class="line"><span class="number">2</span></span><br></pre></td></tr></table></figure></p>
+<p>也可以通过修饰符控制类型和每个字段大小。<br><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">iex&gt; bin = &lt;&lt;<span class="number">3</span> <span class="symbol">:</span>: size(<span class="number">2</span>), <span class="number">5</span> <span class="symbol">:</span>: size(<span class="number">4</span>), <span class="number">1</span> <span class="symbol">:</span>: size(<span class="number">2</span>)&gt;&gt;</span><br><span class="line">&lt;&lt;<span class="number">213</span>&gt;&gt;</span><br><span class="line">iex&gt; IO.format(<span class="string">"~-8.2b~n"</span>, <span class="symbol">:binary</span>.bin_to_list(bin))</span><br><span class="line"><span class="number">11010101</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><h3 id="真值"><a href="#真值" class="headerlink" title="真值"></a>真值</h3><p>true false nil 三个来表示。<br>true 等同于 :true</p>
+<h3 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h3><p>例如：</p>
+<blockquote>
+<p>a === b #严格相等，1 === 1.0 为假<br>a !== b #严格不等， 1 !== 1.0 为真<br>a == b #值相等，1 == 1.0为真。<br>a != b #值不等，1 != 1.0 为假<br>a &gt; b #正常比较<br>a &gt;= b<br>a &lt; b<br>a &lt;= b</p>
+</blockquote>
+<h3 id="布尔运算符"><a href="#布尔运算符" class="headerlink" title="布尔运算符"></a>布尔运算符</h3><p>优先计算第一个参数的值。</p>
+<blockquote>
+<p>a <code>or</code> b   # a 真则真，否则求b<br>a <code>and</code> b  # a 假则假, 否则求b<br><code>not</code> a    # a为真，则假，否则为真</p>
+</blockquote>
+<h3 id="松弛的布尔运算符"><a href="#松弛的布尔运算符" class="headerlink" title="松弛的布尔运算符"></a>松弛的布尔运算符</h3><p>接受任意类型的值，任何除了<code>nil</code>或者<code>false</code>的值都被解释成真。</p>
+<blockquote>
+<p>a || b # a真则为 a，否则为 b<br>a &amp;&amp; b # a真则为 b，否则为 b<br>!a     # a真则为 假，否则为 真</p>
+</blockquote>
+<h3 id="算数运算符"><a href="#算数运算符" class="headerlink" title="算数运算符"></a>算数运算符</h3><pre><code>+ - * / div rem
+</code></pre><p>整数除法会返回浮点数结果，采用div(a,b)可以求得整数结果。</p>
+<p><code>rem</code> 是求余运算，被当做函数来使用。rem(11, 3) =&gt; 2</p>
+<h3 id="链接运算符"><a href="#链接运算符" class="headerlink" title="链接运算符"></a>链接运算符</h3><pre><code>binary1 &lt;&gt; binary2 #链接两个二进制
+list1 ++ list2
+list1 -- list2
+</code></pre><h3 id="in-运算符"><a href="#in-运算符" class="headerlink" title="in 运算符"></a>in 运算符</h3><pre><code>a in enum #测试 a 是否在枚举中
+</code></pre><h2 id="代码规范"><a href="#代码规范" class="headerlink" title="代码规范"></a>代码规范</h2><ol>
+<li><code>Elixir</code>的标识符由大小写字母，数字和下划线组成，可以以问好或者感叹号结尾。</li>
+<li>模块，记录，协议，行为的名称大写字母开头，并驼峰式命名。其他标识符以小写字母或者下划线开头，通常用下划线分隔单词。</li>
+<li>源文件UTF-8编码，但是标识符智能 ASCII 字符。</li>
+<li>习惯上，源文件采用两格缩进，空格而非制表符。</li>
+<li>注释以符号 # 开始。</li>
+<li>参考 <a href="https://github.com/niftyn8/elixir_style_guide" target="_blank" rel="external">编码规范</a></li>
+</ol>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>看官赏点饭钱可好~</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/path/to/wechat-reward-image.jpg" alt="Nurture Passes Nature. WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Elixir/" rel="tag">#Elixir</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/06/29/Elixir-模式匹配与不可变性/" rel="next" title="Elixir-模式匹配与不可变性">
+                <i class="fa fa-chevron-left"></i> Elixir-模式匹配与不可变性
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/06/29/Elixir-匿名函数/" rel="prev" title="Elixir-匿名函数">
+                Elixir-匿名函数 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/06/29/Elixir-基础-内置类型/"
+           data-title="Elixir-基础-内置类型" data-url="http://yoursite.com/2016/06/29/Elixir-基础-内置类型/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <a href="/" class="profilepic">
+          <img itemprop="image"
+               src="/assets/portrait.jpg"
+               alt="Nurture Passes Nature." />
+        </a>       
+          <p class="site-author-name" itemprop="name">Nurture Passes Nature.</p>
+          <p class="site-description motion-element" itemprop="description">Artoo</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">7</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/HelloArtoo" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://hushengdong.com" title="HUSD" target="_blank">HUSD</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#值类型"><span class="nav-number">1.</span> <span class="nav-text">值类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#整数"><span class="nav-number">1.1.</span> <span class="nav-text">整数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#浮点数"><span class="nav-number">1.2.</span> <span class="nav-text">浮点数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#原子"><span class="nav-number">1.3.</span> <span class="nav-text">原子</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#区间"><span class="nav-number">1.4.</span> <span class="nav-text">区间</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#正则表达式"><span class="nav-number">1.5.</span> <span class="nav-text">正则表达式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#系统类型"><span class="nav-number">2.</span> <span class="nav-text">系统类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#PID和端口"><span class="nav-number">2.1.</span> <span class="nav-text">PID和端口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#引用"><span class="nav-number">2.2.</span> <span class="nav-text">引用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#集合类型"><span class="nav-number">3.</span> <span class="nav-text">集合类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#元组"><span class="nav-number">3.1.</span> <span class="nav-text">元组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#列表"><span class="nav-number">3.2.</span> <span class="nav-text">列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关键字列表"><span class="nav-number">3.3.</span> <span class="nav-text">关键字列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#散列表"><span class="nav-number">3.4.</span> <span class="nav-text">散列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二进制"><span class="nav-number">3.5.</span> <span class="nav-text">二进制</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其他"><span class="nav-number">4.</span> <span class="nav-text">其他</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#真值"><span class="nav-number">4.1.</span> <span class="nav-text">真值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#运算符"><span class="nav-number">4.2.</span> <span class="nav-text">运算符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#布尔运算符"><span class="nav-number">4.3.</span> <span class="nav-text">布尔运算符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#松弛的布尔运算符"><span class="nav-number">4.4.</span> <span class="nav-text">松弛的布尔运算符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#算数运算符"><span class="nav-number">4.5.</span> <span class="nav-text">算数运算符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#链接运算符"><span class="nav-number">4.6.</span> <span class="nav-text">链接运算符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#in-运算符"><span class="nav-number">4.7.</span> <span class="nav-text">in 运算符</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码规范"><span class="nav-number">5.</span> <span class="nav-text">代码规范</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Nurture Passes Nature.</span>
+</div>
+
+<div class="powered-by">
+  based on <a class="theme-link" href="http://hexo.io">Hexo</a> , edited by artoo.
+</div>
+
+<div class="theme-info">
+  theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+<div class="busuanzi-count">
+
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv"><i class="fa fa-user"></i><span class="busuanzi-value" id="busuanzi_value_site_uv"></span></span>
+  
+
+  
+    <span class="site-pv"><i class="fa fa-eye"></i><span class="busuanzi-value" id="busuanzi_value_site_pv"></span></span>
+  
+  
+</div>
+
+
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"artoo"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+      
+      <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+      <script src="/js/src/hook-duoshuo.js"></script>
+    
+  
+
+
+
+
+
+
+  
+  
+  
+
+  
+
+  
+
+</body>
+</html>

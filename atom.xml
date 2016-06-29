@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Go Bue !</title>
-  <subtitle>What man is a man who does not make the world better ?</subtitle>
+  <subtitle>You are what you do.</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-06-25T16:42:15.734Z</updated>
+  <updated>2016-06-29T13:15:34.634Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,11 +16,256 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Elixir-匿名函数</title>
+    <link href="http://yoursite.com/2016/06/29/Elixir-%E5%8C%BF%E5%90%8D%E5%87%BD%E6%95%B0/"/>
+    <id>http://yoursite.com/2016/06/29/Elixir-匿名函数/</id>
+    <published>2016-06-29T13:13:52.000Z</published>
+    <updated>2016-06-29T13:15:34.634Z</updated>
+    
+    <content type="html">&lt;p&gt;&lt;code&gt;Elixir&lt;/code&gt;是函数式语言，所以函数式它的一种基本类型。&lt;/p&gt;
+&lt;h2 id=&quot;一般语法&quot;&gt;&lt;a href=&quot;#一般语法&quot; class=&quot;headerlink&quot; title=&quot;一般语法&quot;&gt;&lt;/a&gt;一般语法&lt;/h2&gt;&lt;p&gt;匿名函数用 &lt;strong&gt;fn&lt;/strong&gt; 创建&lt;/p&gt;
+&lt;pre&gt;
+fn
+    parameter-list -&gt; body
+    parameter-list -&gt; body ...
+end
+&lt;/pre&gt;
+
+&lt;p&gt;一个参数列表(圆括号可省略)，一个函数体，二者通过 &lt;code&gt;-&amp;gt;&lt;/code&gt; 隔开。&lt;/p&gt;
+&lt;figure class=&quot;highlight elixir&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;iex&amp;gt; sum = &lt;span class=&quot;keyword&quot;&gt;fn&lt;/span&gt; (a, b) -&amp;gt; a + b &lt;span class=&quot;keyword&quot;&gt;end&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;调用的时候&lt;br&gt;&lt;figure class=&quot;highlight elixir&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;iex&amp;gt; sum.(&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h2 id=&quot;函数模式匹配&quot;&gt;&lt;a href=&quot;#函数模式匹配&quot; class=&quot;headerlink&quot; title=&quot;函数模式匹配&quot;&gt;&lt;/a&gt;函数模式匹配&lt;/h2&gt;&lt;p&gt;回忆一下，&lt;code&gt;Elixir&lt;/code&gt; 没有赋值概念，是将值和模式进行匹配。&lt;br&gt;&lt;figure class=&quot;highlight elixir&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;iex&amp;gt; swap = &lt;span class=&quot;keyword&quot;&gt;fn&lt;/span&gt; &amp;#123;a, b&amp;#125; -&amp;gt; &amp;#123;b, a&amp;#125; &lt;span class=&quot;keyword&quot;&gt;end&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;...&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;iex&amp;gt; swap.(&amp;#123;&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;&amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&quot;一个函数，多个函数体&quot;&gt;&lt;a href=&quot;#一个函数，多个函数体&quot; class=&quot;headerlink&quot; title=&quot;一个函数，多个函数体&quot;&gt;&lt;/a&gt;一个函数，多个函数体&lt;/h2&gt;&lt;p&gt;例如打开文件的时候，对结果进行多个匹配。&lt;br&gt;&lt;figure class=&quot;highlight elixir&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;iex&amp;gt; handle_open = &lt;span class=&quot;keyword&quot;&gt;fn&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;...&amp;gt;&amp;#123;&lt;span class=&quot;symbol&quot;&gt;:ok&lt;/span&gt;, file&amp;#125; -&amp;gt; &lt;span class=&quot;string&quot;&gt;&quot;Read data: &lt;span class=&quot;subst&quot;&gt;#&amp;#123;IO.read(file, &lt;span class=&quot;symbol&quot;&gt;:line&lt;/span&gt;)&amp;#125;&lt;/span&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;...&amp;gt;&amp;#123;&lt;span class=&quot;number&quot;&gt;_&lt;/span&gt;, error&amp;#125; -&amp;gt; &lt;span class=&quot;string&quot;&gt;&quot;Error: &lt;span class=&quot;subst&quot;&gt;#&amp;#123;&lt;span class=&quot;symbol&quot;&gt;:file&lt;/span&gt;.format_error(error)&amp;#125;&lt;/span&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;...&amp;gt;&lt;span class=&quot;keyword&quot;&gt;end&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;_&lt;/code&gt; 当参数可以省略的时候，用 &lt;code&gt;_&lt;/code&gt; 去充当一个占位。&lt;/p&gt;
+&lt;figure class=&quot;highlight elixir&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;iex&amp;gt; handle_open.(File.open(&lt;span class=&quot;string&quot;&gt;&quot;code/hello.exs&quot;&lt;/span&gt;))&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;string&quot;&gt;&quot;Read data: IO.puts \&quot;Hello,world!\&quot;\n&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;iex&amp;gt; handle_open.(File.open(&lt;span class=&quot;string&quot;&gt;&quot;nonexistent&quot;&lt;/span&gt;))&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;string&quot;&gt;&quot;Error: no such file or directory&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;可见当文件存在，第一个参数会匹配&lt;code&gt;:ok&lt;/code&gt;，走第一行函数体。&lt;br&gt;文件不存在时候，匹配第二行函数体，输出错误。&lt;/p&gt;
+&lt;h2 id=&quot;函数中的函数&quot;&gt;&lt;a href=&quot;#函数中的函数&quot; class=&quot;headerlink&quot; title=&quot;函数中的函数&quot;&gt;&lt;/a&gt;函数中的函数&lt;/h2&gt;&lt;figure class=&quot;highlight elixir&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;iex&amp;gt; fun1 = &lt;span class=&quot;keyword&quot;&gt;fn&lt;/span&gt; -&amp;gt; &lt;span class=&quot;keyword&quot;&gt;fn&lt;/span&gt; -&amp;gt; &lt;span class=&quot;string&quot;&gt;&quot;Hello&quot;&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;end&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;end&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;...&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;iex&amp;gt; fun1.().()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;string&quot;&gt;&quot;Hello&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;闭包&quot;&gt;&lt;a href=&quot;#闭包&quot; class=&quot;headerlink&quot; title=&quot;闭包&quot;&gt;&lt;/a&gt;闭包&lt;/h2&gt;&lt;p&gt;刚才那段代码，改造一下：&lt;br&gt;&lt;figure class=&quot;highlight elixir&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;iex&amp;gt; fun1 = &lt;span class=&quot;keyword&quot;&gt;fn&lt;/span&gt; name -&amp;gt; &lt;span class=&quot;keyword&quot;&gt;fn&lt;/span&gt; -&amp;gt; &lt;span class=&quot;string&quot;&gt;&quot;Hello,&lt;span class=&quot;subst&quot;&gt;#&amp;#123;name&amp;#125;&lt;/span&gt;&quot;&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;end&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;end&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;...&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;iex&amp;gt; fun1.(&lt;span class=&quot;string&quot;&gt;&quot;jack&quot;&lt;/span&gt;).()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;string&quot;&gt;&quot;Hello,jack&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;可见，内部函数调用了外部函数的变量。&lt;/p&gt;
+&lt;p&gt;变量 &lt;code&gt;name&lt;/code&gt; 被绑定到外部函数的作用域里，当定义内部函数的时候，它继承这个作用域并将 &lt;code&gt;name&lt;/code&gt; 的绑定值传递到里面。&lt;/p&gt;
+&lt;p&gt;这就是闭包（&lt;strong&gt;closure&lt;/strong&gt;）：作用域将其中的变量绑定封闭起来，并将它们打包到稍后能被保存且使用的东西上。&lt;/p&gt;
+&lt;h2 id=&quot;函数做为参数进行传递&quot;&gt;&lt;a href=&quot;#函数做为参数进行传递&quot; class=&quot;headerlink&quot; title=&quot;函数做为参数进行传递&quot;&gt;&lt;/a&gt;函数做为参数进行传递&lt;/h2&gt;&lt;figure class=&quot;highlight elixir&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;iex&amp;gt; fun1 = &lt;span class=&quot;keyword&quot;&gt;fn&lt;/span&gt; name -&amp;gt; &lt;span class=&quot;keyword&quot;&gt;fn&lt;/span&gt; -&amp;gt; &lt;span class=&quot;string&quot;&gt;&quot;Hello,&lt;span class=&quot;subst&quot;&gt;#&amp;#123;name&amp;#125;&lt;/span&gt;&quot;&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;end&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;end&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;...&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;iex&amp;gt; fun2 = &lt;span class=&quot;keyword&quot;&gt;fn&lt;/span&gt; (fun, name) -&amp;gt; fun.(name) &lt;span class=&quot;keyword&quot;&gt;end&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;...&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;iex&amp;gt; fun2.(fun1, &lt;span class=&quot;string&quot;&gt;&quot;jack&quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;string&quot;&gt;&quot;Hello,jack&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;另一个例子&lt;br&gt;&lt;figure class=&quot;highlight elixir&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;iex&amp;gt; Enum.map [&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;], &lt;span class=&quot;keyword&quot;&gt;fn&lt;/span&gt; elem -&amp;gt; elem * &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;end&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&quot;amp-运算符&quot;&gt;&lt;a href=&quot;#amp-运算符&quot; class=&quot;headerlink&quot; title=&quot;&amp;amp; 运算符&quot;&gt;&lt;/a&gt;&amp;amp; 运算符&lt;/h2&gt;&lt;p&gt;创建简短辅助的函数很普遍，所以&lt;code&gt;Elixir&lt;/code&gt;提供一个快捷的创建函数的方式。上面的例子，改造下：&lt;br&gt;&lt;figure class=&quot;highlight elixir&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;iex&amp;gt; Enum.map [&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;], &amp;amp;(&amp;amp;&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt; * &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;) &lt;span class=&quot;keyword&quot;&gt;end&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;code&gt;Elixir&lt;/code&gt;是函数式语言，所以函数式它的一种基本类型。&lt;/p&gt;
+&lt;h2 id=&quot;一般语法&quot;&gt;&lt;a href=&quot;#一般语法&quot; class=&quot;headerlink&quot; title=&quot;一般语法&quot;&gt;&lt;/a&gt;一般语法&lt;/h2&gt;&lt;p&gt;匿名函数用 &lt;strong&gt;fn&lt;/strong&gt; 创建&lt;/p&gt;
+&lt;pre&gt;
+fn
+    parameter-list -&gt; body
+    parameter-list -&gt; body ...
+end
+&lt;/pre&gt;
+
+&lt;p&gt;一个参数列表(圆括号可省略)，一个函数体，二者通过 &lt;code&gt;-&amp;gt;&lt;/code&gt; 隔开。&lt;/p&gt;
+&lt;figure class=&quot;highlight elixir&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;iex&amp;gt; sum = &lt;span class=&quot;keyword&quot;&gt;fn&lt;/span&gt; (a, b) -&amp;gt; a + b &lt;span class=&quot;keyword&quot;&gt;end&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;调用的时候&lt;br&gt;&lt;figure class=&quot;highlight elixir&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;iex&amp;gt; sum.(&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Elixir" scheme="http://yoursite.com/categories/Elixir/"/>
+    
+    
+      <category term="Elixir" scheme="http://yoursite.com/tags/Elixir/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Elixir-基础-内置类型</title>
+    <link href="http://yoursite.com/2016/06/29/Elixir-%E5%9F%BA%E7%A1%80-%E5%86%85%E7%BD%AE%E7%B1%BB%E5%9E%8B/"/>
+    <id>http://yoursite.com/2016/06/29/Elixir-基础-内置类型/</id>
+    <published>2016-06-29T13:05:23.000Z</published>
+    <updated>2016-06-29T13:10:06.321Z</updated>
+    
+    <content type="html">&lt;p&gt;&lt;code&gt;Elixir&lt;/code&gt;内置类型有：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;值类型&lt;ul&gt;
+&lt;li&gt;任意大小的整数&lt;/li&gt;
+&lt;li&gt;浮点数&lt;/li&gt;
+&lt;li&gt;原子&lt;/li&gt;
+&lt;li&gt;区间&lt;/li&gt;
+&lt;li&gt;正则表达式&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;系统类型&lt;ul&gt;
+&lt;li&gt;PID和端口&lt;/li&gt;
+&lt;li&gt;引用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;集合类型&lt;ul&gt;
+&lt;li&gt;元组&lt;/li&gt;
+&lt;li&gt;列表&lt;/li&gt;
+&lt;li&gt;散列表&lt;/li&gt;
+&lt;li&gt;二进制 &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;Elixir&lt;/code&gt;里其实 &lt;strong&gt;函数&lt;/strong&gt; 也是类型。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;值类型&quot;&gt;&lt;a href=&quot;#值类型&quot; class=&quot;headerlink&quot; title=&quot;值类型&quot;&gt;&lt;/a&gt;值类型&lt;/h2&gt;&lt;h3 id=&quot;整数&quot;&gt;&lt;a href=&quot;#整数&quot; class=&quot;headerlink&quot; title=&quot;整数&quot;&gt;&lt;/a&gt;整数&lt;/h3&gt;&lt;p&gt;整数字面量可被写作十进制（1234），十六进制（0xcafe），八进制（0o765）和二进制（0b1010）。&lt;/p&gt;
+&lt;p&gt;数值较大的时候可以用下划线分组。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;1_000_000&lt;br&gt;等同于：1000000&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;浮点数&quot;&gt;&lt;a href=&quot;#浮点数&quot; class=&quot;headerlink&quot; title=&quot;浮点数&quot;&gt;&lt;/a&gt;浮点数&lt;/h3&gt;&lt;p&gt;浮点数使用含小数点的十进制表示，小数点前后必须有一位数字，结尾指数可选。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;1.0&lt;br&gt;0.2456&lt;br&gt;0.314159el&lt;br&gt;314159.0e-5&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;符合&lt;code&gt;IEEE754&lt;/code&gt;标准双精度表示，拥有16位精度，指数最大达到10^308。&lt;/p&gt;
+&lt;h3 id=&quot;原子&quot;&gt;&lt;a href=&quot;#原子&quot; class=&quot;headerlink&quot; title=&quot;原子&quot;&gt;&lt;/a&gt;原子&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;常量&lt;/strong&gt;，用来表示某些东西的名字。以（：）开头，随后跟着一个原子单词或者&lt;code&gt;Elixir&lt;/code&gt;运算符。&lt;br&gt;（原子的名字就是它的值，俩个同名原子总是相等的。）&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;:ok&lt;br&gt;:is_binary?&lt;br&gt;:var@2&lt;br&gt;:&amp;lt;&amp;gt;&lt;br&gt;:===&lt;br&gt;:”func/3”&lt;br&gt;:”long john silver”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;区间&quot;&gt;&lt;a href=&quot;#区间&quot; class=&quot;headerlink&quot; title=&quot;区间&quot;&gt;&lt;/a&gt;区间&lt;/h3&gt;&lt;p&gt;区间被表示为，&lt;code&gt;开始&lt;/code&gt;-&lt;code&gt;结束&lt;/code&gt;，开始结束可以是任意值类型。但是如果你想遍历区间，两端必须是整数。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;1..10&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;正则表达式&quot;&gt;&lt;a href=&quot;#正则表达式&quot; class=&quot;headerlink&quot; title=&quot;正则表达式&quot;&gt;&lt;/a&gt;正则表达式&lt;/h3&gt;&lt;p&gt;&lt;code&gt;Elixir&lt;/code&gt;支持正则表达式，写作~r{regexp}或者~r{regexp}opts，{和}作为分隔符。&lt;br&gt;可用&lt;code&gt;Regex&lt;/code&gt;模块操作正则表达式。&lt;br&gt;&lt;figure class=&quot;highlight elixir&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;iex&amp;gt;Regex.run ~r&amp;#123;[aeiou]&amp;#125;, &lt;span class=&quot;string&quot;&gt;&quot;caterpillar&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[&lt;span class=&quot;string&quot;&gt;&quot;a&quot;&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&quot;系统类型&quot;&gt;&lt;a href=&quot;#系统类型&quot; class=&quot;headerlink&quot; title=&quot;系统类型&quot;&gt;&lt;/a&gt;系统类型&lt;/h2&gt;&lt;h3 id=&quot;PID和端口&quot;&gt;&lt;a href=&quot;#PID和端口&quot; class=&quot;headerlink&quot; title=&quot;PID和端口&quot;&gt;&lt;/a&gt;PID和端口&lt;/h3&gt;&lt;p&gt;&lt;code&gt;PID&lt;/code&gt;是本地或者远程的进程的引用。（当前PID值可以通过self获得。）&lt;br&gt;端口是读/写资源的引用。&lt;/p&gt;
+&lt;h3 id=&quot;引用&quot;&gt;&lt;a href=&quot;#引用&quot; class=&quot;headerlink&quot; title=&quot;引用&quot;&gt;&lt;/a&gt;引用&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;make_ref&lt;/strong&gt; 函数用于创建全局唯一的引用。&lt;/p&gt;
+&lt;h2 id=&quot;集合类型&quot;&gt;&lt;a href=&quot;#集合类型&quot; class=&quot;headerlink&quot; title=&quot;集合类型&quot;&gt;&lt;/a&gt;集合类型&lt;/h2&gt;&lt;h3 id=&quot;元组&quot;&gt;&lt;a href=&quot;#元组&quot; class=&quot;headerlink&quot; title=&quot;元组&quot;&gt;&lt;/a&gt;元组&lt;/h3&gt;&lt;p&gt;表示一组有序元素的集合。&lt;br&gt;一对花口号内，元素用逗号隔开。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;{1, 2}&lt;br&gt;{:ok, 42, “next”}&lt;br&gt;{:error, :enoent}&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;列表&quot;&gt;&lt;a href=&quot;#列表&quot; class=&quot;headerlink&quot; title=&quot;列表&quot;&gt;&lt;/a&gt;列表&lt;/h3&gt;&lt;p&gt;元组，更像是通常意义上的数组。&lt;br&gt;而列表是一种链式的数据结构，或者我们可以直接称之为链表。&lt;br&gt;列表适合线性遍历，随机访问会很费时。&lt;/p&gt;
+&lt;p&gt;列表有一些方便的运算符：&lt;/p&gt;
+&lt;figure class=&quot;highlight elixir&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;iex&amp;gt; [&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;] ++ [&lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;6&lt;/span&gt;] &lt;span class=&quot;comment&quot;&gt;#链接&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;6&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;iex&amp;gt; [&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;] -- [&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;] &lt;span class=&quot;comment&quot;&gt;#差集&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[&lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;iex&amp;gt; &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; [&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;] &lt;span class=&quot;comment&quot;&gt;#属于&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;true&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;关键字列表&quot;&gt;&lt;a href=&quot;#关键字列表&quot; class=&quot;headerlink&quot; title=&quot;关键字列表&quot;&gt;&lt;/a&gt;关键字列表&lt;/h3&gt;&lt;p&gt;因为我们常常需要一组键值对，&lt;code&gt;Elixir&lt;/code&gt;提供了一种简写方式。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[name: “Dave”, city: “Dallas”, age: “28”]&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;Elixir&lt;/code&gt;将其转换成一个由双值元组组成的列表：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[{name: “Dave”}, {city: “Dallas”}, {age: “28”}]&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;另，当关键字列表作为函数调用最后一个参数时，允许省略方括号。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Db.save record, {name: “Dave”}, {city: “Dallas”}&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;散列表&quot;&gt;&lt;a href=&quot;#散列表&quot; class=&quot;headerlink&quot; title=&quot;散列表&quot;&gt;&lt;/a&gt;散列表&lt;/h3&gt;&lt;p&gt;一组键值对的集合，格式：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;%{key =&amp;gt; value, key =&amp;gt; value}&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;为何既有散列表又有关键字列表呢。散列表的键 &lt;strong&gt;不能相同&lt;/strong&gt;，而关键字列表允许存在重复的键。散列表更高效，尤其在数量不断增加的时候。&lt;/p&gt;
+&lt;p&gt;访问数据：&lt;br&gt;&lt;figure class=&quot;highlight elixir&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;iex&amp;gt; states = %&amp;#123;&lt;span class=&quot;string&quot;&gt;&quot;AL&quot;&lt;/span&gt; =&amp;gt; &lt;span class=&quot;string&quot;&gt;&quot;Alabama&quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&quot;WI&quot;&lt;/span&gt; =&amp;gt; &lt;span class=&quot;string&quot;&gt;&quot;Wisconsin&quot;&lt;/span&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;%&amp;#123;&lt;span class=&quot;string&quot;&gt;&quot;AL&quot;&lt;/span&gt; =&amp;gt; &lt;span class=&quot;string&quot;&gt;&quot;Alabama&quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&quot;WI&quot;&lt;/span&gt; =&amp;gt; &lt;span class=&quot;string&quot;&gt;&quot;Wisconsin&quot;&lt;/span&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;iex&amp;gt; states[&lt;span class=&quot;string&quot;&gt;&quot;AL&quot;&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;string&quot;&gt;&quot;Alabama&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;如果是原子类型，可以使用点符号&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;#:green&lt;br&gt;colors.green &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;二进制&quot;&gt;&lt;a href=&quot;#二进制&quot; class=&quot;headerlink&quot; title=&quot;二进制&quot;&gt;&lt;/a&gt;二进制&lt;/h3&gt;&lt;p&gt;有时候你需要访问你的数据是一个位，或者字节。&lt;br&gt;例如JPEG 和 MP3 文件头部包含一些字段，可能在单个字节内放置两到三个值。&lt;br&gt;二进制写法：&amp;lt;&amp;lt; 和 &amp;gt;&amp;gt; 之间。&lt;br&gt;&lt;figure class=&quot;highlight elixir&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;iex&amp;gt; bin = &amp;lt;&amp;lt;&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;&amp;lt;&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;iex&amp;gt; byte_size bin&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;也可以通过修饰符控制类型和每个字段大小。&lt;br&gt;&lt;figure class=&quot;highlight elixir&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;iex&amp;gt; bin = &amp;lt;&amp;lt;&lt;span class=&quot;number&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;symbol&quot;&gt;:&lt;/span&gt;: size(&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;), &lt;span class=&quot;number&quot;&gt;5&lt;/span&gt; &lt;span class=&quot;symbol&quot;&gt;:&lt;/span&gt;: size(&lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;), &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;symbol&quot;&gt;:&lt;/span&gt;: size(&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;)&amp;gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;&amp;lt;&lt;span class=&quot;number&quot;&gt;213&lt;/span&gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;iex&amp;gt; IO.format(&lt;span class=&quot;string&quot;&gt;&quot;~-8.2b~n&quot;&lt;/span&gt;, &lt;span class=&quot;symbol&quot;&gt;:binary&lt;/span&gt;.bin_to_list(bin))&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;11010101&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&quot;其他&quot;&gt;&lt;a href=&quot;#其他&quot; class=&quot;headerlink&quot; title=&quot;其他&quot;&gt;&lt;/a&gt;其他&lt;/h2&gt;&lt;h3 id=&quot;真值&quot;&gt;&lt;a href=&quot;#真值&quot; class=&quot;headerlink&quot; title=&quot;真值&quot;&gt;&lt;/a&gt;真值&lt;/h3&gt;&lt;p&gt;true false nil 三个来表示。&lt;br&gt;true 等同于 :true&lt;/p&gt;
+&lt;h3 id=&quot;运算符&quot;&gt;&lt;a href=&quot;#运算符&quot; class=&quot;headerlink&quot; title=&quot;运算符&quot;&gt;&lt;/a&gt;运算符&lt;/h3&gt;&lt;p&gt;例如：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;a === b #严格相等，1 === 1.0 为假&lt;br&gt;a !== b #严格不等， 1 !== 1.0 为真&lt;br&gt;a == b #值相等，1 == 1.0为真。&lt;br&gt;a != b #值不等，1 != 1.0 为假&lt;br&gt;a &amp;gt; b #正常比较&lt;br&gt;a &amp;gt;= b&lt;br&gt;a &amp;lt; b&lt;br&gt;a &amp;lt;= b&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;布尔运算符&quot;&gt;&lt;a href=&quot;#布尔运算符&quot; class=&quot;headerlink&quot; title=&quot;布尔运算符&quot;&gt;&lt;/a&gt;布尔运算符&lt;/h3&gt;&lt;p&gt;优先计算第一个参数的值。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;a &lt;code&gt;or&lt;/code&gt; b   # a 真则真，否则求b&lt;br&gt;a &lt;code&gt;and&lt;/code&gt; b  # a 假则假, 否则求b&lt;br&gt;&lt;code&gt;not&lt;/code&gt; a    # a为真，则假，否则为真&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;松弛的布尔运算符&quot;&gt;&lt;a href=&quot;#松弛的布尔运算符&quot; class=&quot;headerlink&quot; title=&quot;松弛的布尔运算符&quot;&gt;&lt;/a&gt;松弛的布尔运算符&lt;/h3&gt;&lt;p&gt;接受任意类型的值，任何除了&lt;code&gt;nil&lt;/code&gt;或者&lt;code&gt;false&lt;/code&gt;的值都被解释成真。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;a || b # a真则为 a，否则为 b&lt;br&gt;a &amp;amp;&amp;amp; b # a真则为 b，否则为 b&lt;br&gt;!a     # a真则为 假，否则为 真&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;算数运算符&quot;&gt;&lt;a href=&quot;#算数运算符&quot; class=&quot;headerlink&quot; title=&quot;算数运算符&quot;&gt;&lt;/a&gt;算数运算符&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;+ - * / div rem
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;整数除法会返回浮点数结果，采用div(a,b)可以求得整数结果。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;rem&lt;/code&gt; 是求余运算，被当做函数来使用。rem(11, 3) =&amp;gt; 2&lt;/p&gt;
+&lt;h3 id=&quot;链接运算符&quot;&gt;&lt;a href=&quot;#链接运算符&quot; class=&quot;headerlink&quot; title=&quot;链接运算符&quot;&gt;&lt;/a&gt;链接运算符&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;binary1 &amp;lt;&amp;gt; binary2 #链接两个二进制
+list1 ++ list2
+list1 -- list2
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;in-运算符&quot;&gt;&lt;a href=&quot;#in-运算符&quot; class=&quot;headerlink&quot; title=&quot;in 运算符&quot;&gt;&lt;/a&gt;in 运算符&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;a in enum #测试 a 是否在枚举中
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&quot;代码规范&quot;&gt;&lt;a href=&quot;#代码规范&quot; class=&quot;headerlink&quot; title=&quot;代码规范&quot;&gt;&lt;/a&gt;代码规范&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;Elixir&lt;/code&gt;的标识符由大小写字母，数字和下划线组成，可以以问好或者感叹号结尾。&lt;/li&gt;
+&lt;li&gt;模块，记录，协议，行为的名称大写字母开头，并驼峰式命名。其他标识符以小写字母或者下划线开头，通常用下划线分隔单词。&lt;/li&gt;
+&lt;li&gt;源文件UTF-8编码，但是标识符智能 ASCII 字符。&lt;/li&gt;
+&lt;li&gt;习惯上，源文件采用两格缩进，空格而非制表符。&lt;/li&gt;
+&lt;li&gt;注释以符号 # 开始。&lt;/li&gt;
+&lt;li&gt;参考 &lt;a href=&quot;https://github.com/niftyn8/elixir_style_guide&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;编码规范&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;code&gt;Elixir&lt;/code&gt;内置类型有：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;值类型&lt;ul&gt;
+&lt;li&gt;任意大小的整数&lt;/li&gt;
+&lt;li&gt;浮点数&lt;/li&gt;
+&lt;li&gt;原子&lt;/li&gt;
+&lt;li&gt;区间&lt;/li&gt;
+&lt;li&gt;正则表达式&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;系统类型&lt;ul&gt;
+&lt;li&gt;PID和端口&lt;/li&gt;
+&lt;li&gt;引用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;集合类型&lt;ul&gt;
+&lt;li&gt;元组&lt;/li&gt;
+&lt;li&gt;列表&lt;/li&gt;
+&lt;li&gt;散列表&lt;/li&gt;
+&lt;li&gt;二进制 &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;Elixir&lt;/code&gt;里其实 &lt;strong&gt;函数&lt;/strong&gt; 也是类型。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Elixir" scheme="http://yoursite.com/categories/Elixir/"/>
+    
+    
+      <category term="Elixir" scheme="http://yoursite.com/tags/Elixir/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Elixir-模式匹配与不可变性</title>
+    <link href="http://yoursite.com/2016/06/29/Elixir-%E6%A8%A1%E5%BC%8F%E5%8C%B9%E9%85%8D%E4%B8%8E%E4%B8%8D%E5%8F%AF%E5%8F%98%E6%80%A7/"/>
+    <id>http://yoursite.com/2016/06/29/Elixir-模式匹配与不可变性/</id>
+    <published>2016-06-29T12:54:24.000Z</published>
+    <updated>2016-06-29T12:56:30.738Z</updated>
+    
+    <content type="html">&lt;h2 id=&quot;模式匹配&quot;&gt;&lt;a href=&quot;#模式匹配&quot; class=&quot;headerlink&quot; title=&quot;模式匹配&quot;&gt;&lt;/a&gt;模式匹配&lt;/h2&gt;&lt;h3 id=&quot;赋值并非如你所料&quot;&gt;&lt;a href=&quot;#赋值并非如你所料&quot; class=&quot;headerlink&quot; title=&quot;赋值并非如你所料&quot;&gt;&lt;/a&gt;赋值并非如你所料&lt;/h3&gt;&lt;figure class=&quot;highlight elixir&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;iex&amp;gt; a = &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;iex&amp;gt; a + &lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;看下以上代码，很简单吧？&lt;br&gt;把 1 赋值给 a，然后 a 加上 3 返回 4 。&lt;/p&gt;
+&lt;p&gt;但是在&lt;code&gt;Elixir&lt;/code&gt;里面不是这样，等号更像一种 &lt;strong&gt;断言(assertion)&lt;/strong&gt; ，如果可以找到一种方式让左边等于右边，则执行成功；在&lt;code&gt;Elixir&lt;/code&gt;里面可以称之为匹配运算符 &lt;code&gt;match operator&lt;/code&gt;，参考如下代码：&lt;br&gt;&lt;figure class=&quot;highlight elixir&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;iex&amp;gt; a = &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;iex&amp;gt; &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt; = a&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;iex&amp;gt; &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt; = a&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;** (MatchError) no match of right hand side &lt;span class=&quot;symbol&quot;&gt;vlaue:&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;&lt;strong&gt;模式匹配&lt;/strong&gt; 必须值与模式的结构相同，而且模式中项目与值中对应的项目都匹配时才算成功。&lt;br&gt;&lt;figure class=&quot;highlight elixir&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;iex&amp;gt; list = [&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;iex&amp;gt; [a, &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;, b] = list&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;iex&amp;gt; a&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;iex&amp;gt; b&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;下面匹配失败:&lt;br&gt;&lt;figure class=&quot;highlight elixir&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;iex&amp;gt; list = [&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;iex&amp;gt; [a, &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;, b] = list&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;**(MatchError) no match of right hand side &lt;span class=&quot;symbol&quot;&gt;vlaue:&lt;/span&gt; [&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;匹配过程中，变量一旦绑定某个值，在匹配其余部分的时候就会保持不变；如果想强制让已有的值参与匹配，用 &lt;code&gt;^&lt;/code&gt;（脱字符）前缀。&lt;br&gt;&lt;figure class=&quot;highlight elixir&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;iex&amp;gt; a = &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;iex&amp;gt; a = &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;iex&amp;gt; ^a = &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;** (MatchError) no match of right hand side &lt;span class=&quot;symbol&quot;&gt;vlaue:&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&quot;不可变性&quot;&gt;&lt;a href=&quot;#不可变性&quot; class=&quot;headerlink&quot; title=&quot;不可变性&quot;&gt;&lt;/a&gt;不可变性&lt;/h2&gt;&lt;p&gt;&lt;code&gt;Elixir&lt;/code&gt;的数据一旦创建就不能被改变。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;在函数式语言里，我们总是转换数据，我们从不就地修改它。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;在大数据编程语言里，大多数复合类型是可变的，你可以修改它们的全部或者部分内容。这种情况当在并行的时候发生，那么受伤的总是你。例如Java中，由于可变性，多线程访问一个变量的时候我们总要考虑到共享变量的状态，然后通过锁等机制去保证数据准确性。&lt;/p&gt;
+&lt;h3 id=&quot;不可变的数据才是已知的&quot;&gt;&lt;a href=&quot;#不可变的数据才是已知的&quot; class=&quot;headerlink&quot; title=&quot;不可变的数据才是已知的&quot;&gt;&lt;/a&gt;不可变的数据才是已知的&lt;/h3&gt;&lt;p&gt;“编程就是形式数据转换”。&lt;br&gt;比如当更新[1, 2, 3]时，我们不是在原址修改它，而是将它转换成新数据。&lt;/p&gt;
+&lt;h3 id=&quot;复制数据&quot;&gt;&lt;a href=&quot;#复制数据&quot; class=&quot;headerlink&quot; title=&quot;复制数据&quot;&gt;&lt;/a&gt;复制数据&lt;/h3&gt;&lt;p&gt;凭借常识，大家会认为每次修改都要拷贝一份副本这种数据的复制是抵消的；但其实相反，&lt;code&gt;Elixir&lt;/code&gt;知道已有数据是不可变的，所以当创建新的结构时，它可以重用这些数据的部分或者全部。&lt;br&gt;简而言之，不用考虑数据复制在&lt;code&gt;Elixir&lt;/code&gt;中的效率问题。&lt;/p&gt;
+&lt;h2 id=&quot;垃圾回收&quot;&gt;&lt;a href=&quot;#垃圾回收&quot; class=&quot;headerlink&quot; title=&quot;垃圾回收&quot;&gt;&lt;/a&gt;垃圾回收&lt;/h2&gt;&lt;p&gt;&lt;code&gt;Elixir&lt;/code&gt; 最酷的地方是可以在代码中使用许许多多的进程，而每个进程都有自己的堆，应用程序的数据都由这些进程分摊，跟所有把所有的数据放在一个堆里的情况相比，每个单独的堆是非常小的。&lt;br&gt;因此&lt;code&gt;Elixir&lt;/code&gt;里面垃圾回收速度回更快。&lt;br&gt;当一个进程在其堆饱和前，终止时，它所有的数据都会被删除，没有必要进行垃圾回收。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;模式匹配&quot;&gt;&lt;a href=&quot;#模式匹配&quot; class=&quot;headerlink&quot; title=&quot;模式匹配&quot;&gt;&lt;/a&gt;模式匹配&lt;/h2&gt;&lt;h3 id=&quot;赋值并非如你所料&quot;&gt;&lt;a href=&quot;#赋值并非如你所料&quot; class=&quot;headerlink&quot; title=&quot;赋值并非如你所料&quot;&gt;&lt;/a&gt;赋值并非如你所料&lt;/h3&gt;&lt;figure class=&quot;highlight elixir&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;iex&amp;gt; a = &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;iex&amp;gt; a + &lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;看下以上代码，很简单吧？&lt;br&gt;把 1 赋值给 a，然后 a 加上 3 返回 4 。&lt;/p&gt;
+&lt;p&gt;但是在&lt;code&gt;Elixir&lt;/code&gt;里面不是这样，等号更像一种 &lt;strong&gt;断言(assertion)&lt;/strong&gt; ，如果可以找到一种方式让左边等于右边，则执行成功；在&lt;code&gt;Elixir&lt;/code&gt;里面可以称之为匹配运算符 &lt;code&gt;match operator&lt;/code&gt;，参考如下代码：&lt;br&gt;&lt;figure class=&quot;highlight elixir&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;iex&amp;gt; a = &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;iex&amp;gt; &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt; = a&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;iex&amp;gt; &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt; = a&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;** (MatchError) no match of right hand side &lt;span class=&quot;symbol&quot;&gt;vlaue:&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Elixir" scheme="http://yoursite.com/categories/Elixir/"/>
+    
+    
+      <category term="Elixir" scheme="http://yoursite.com/tags/Elixir/"/>
+    
+  </entry>
+  
+  <entry>
     <title>学一门未来的语言Elixir</title>
     <link href="http://yoursite.com/2016/06/25/%E5%AD%A6%E4%B8%80%E9%97%A8%E6%9C%AA%E6%9D%A5%E7%9A%84%E8%AF%AD%E8%A8%80Elixir/"/>
     <id>http://yoursite.com/2016/06/25/学一门未来的语言Elixir/</id>
     <published>2016-06-25T15:58:15.000Z</published>
-    <updated>2016-06-25T16:42:15.734Z</updated>
+    <updated>2016-06-29T13:02:02.177Z</updated>
     
     <content type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt;&lt;p&gt;“不要咖啡，不要大象，不要蟒蛇，不要红宝石，只要万金油。”&lt;/p&gt;
 &lt;/blockquote&gt;
