@@ -4,9 +4,9 @@
   <subtitle>You are what you do.</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="http://gobue.com/"/>
   <updated>2016-06-29T13:15:34.634Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>http://gobue.com/</id>
   
   <author>
     <name>Nurture Passes Nature.</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>Elixir-匿名函数</title>
-    <link href="http://yoursite.com/2016/06/29/Elixir-%E5%8C%BF%E5%90%8D%E5%87%BD%E6%95%B0/"/>
-    <id>http://yoursite.com/2016/06/29/Elixir-匿名函数/</id>
+    <link href="http://gobue.com/2016/06/29/Elixir-%E5%8C%BF%E5%90%8D%E5%87%BD%E6%95%B0/"/>
+    <id>http://gobue.com/2016/06/29/Elixir-匿名函数/</id>
     <published>2016-06-29T13:13:52.000Z</published>
     <updated>2016-06-29T13:15:34.634Z</updated>
     
@@ -67,17 +67,17 @@ end
     
     </summary>
     
-      <category term="Elixir" scheme="http://yoursite.com/categories/Elixir/"/>
+      <category term="Elixir" scheme="http://gobue.com/categories/Elixir/"/>
     
     
-      <category term="Elixir" scheme="http://yoursite.com/tags/Elixir/"/>
+      <category term="Elixir" scheme="http://gobue.com/tags/Elixir/"/>
     
   </entry>
   
   <entry>
     <title>Elixir-基础-内置类型</title>
-    <link href="http://yoursite.com/2016/06/29/Elixir-%E5%9F%BA%E7%A1%80-%E5%86%85%E7%BD%AE%E7%B1%BB%E5%9E%8B/"/>
-    <id>http://yoursite.com/2016/06/29/Elixir-基础-内置类型/</id>
+    <link href="http://gobue.com/2016/06/29/Elixir-%E5%9F%BA%E7%A1%80-%E5%86%85%E7%BD%AE%E7%B1%BB%E5%9E%8B/"/>
+    <id>http://gobue.com/2016/06/29/Elixir-基础-内置类型/</id>
     <published>2016-06-29T13:05:23.000Z</published>
     <updated>2016-06-29T13:10:06.321Z</updated>
     
@@ -216,17 +216,17 @@ list1 -- list2
     
     </summary>
     
-      <category term="Elixir" scheme="http://yoursite.com/categories/Elixir/"/>
+      <category term="Elixir" scheme="http://gobue.com/categories/Elixir/"/>
     
     
-      <category term="Elixir" scheme="http://yoursite.com/tags/Elixir/"/>
+      <category term="Elixir" scheme="http://gobue.com/tags/Elixir/"/>
     
   </entry>
   
   <entry>
     <title>Elixir-模式匹配与不可变性</title>
-    <link href="http://yoursite.com/2016/06/29/Elixir-%E6%A8%A1%E5%BC%8F%E5%8C%B9%E9%85%8D%E4%B8%8E%E4%B8%8D%E5%8F%AF%E5%8F%98%E6%80%A7/"/>
-    <id>http://yoursite.com/2016/06/29/Elixir-模式匹配与不可变性/</id>
+    <link href="http://gobue.com/2016/06/29/Elixir-%E6%A8%A1%E5%BC%8F%E5%8C%B9%E9%85%8D%E4%B8%8E%E4%B8%8D%E5%8F%AF%E5%8F%98%E6%80%A7/"/>
+    <id>http://gobue.com/2016/06/29/Elixir-模式匹配与不可变性/</id>
     <published>2016-06-29T12:54:24.000Z</published>
     <updated>2016-06-29T12:56:30.738Z</updated>
     
@@ -253,17 +253,17 @@ list1 -- list2
     
     </summary>
     
-      <category term="Elixir" scheme="http://yoursite.com/categories/Elixir/"/>
+      <category term="Elixir" scheme="http://gobue.com/categories/Elixir/"/>
     
     
-      <category term="Elixir" scheme="http://yoursite.com/tags/Elixir/"/>
+      <category term="Elixir" scheme="http://gobue.com/tags/Elixir/"/>
     
   </entry>
   
   <entry>
     <title>学一门未来的语言Elixir</title>
-    <link href="http://yoursite.com/2016/06/25/%E5%AD%A6%E4%B8%80%E9%97%A8%E6%9C%AA%E6%9D%A5%E7%9A%84%E8%AF%AD%E8%A8%80Elixir/"/>
-    <id>http://yoursite.com/2016/06/25/学一门未来的语言Elixir/</id>
+    <link href="http://gobue.com/2016/06/25/%E5%AD%A6%E4%B8%80%E9%97%A8%E6%9C%AA%E6%9D%A5%E7%9A%84%E8%AF%AD%E8%A8%80Elixir/"/>
+    <id>http://gobue.com/2016/06/25/学一门未来的语言Elixir/</id>
     <published>2016-06-25T15:58:15.000Z</published>
     <updated>2016-06-29T13:02:02.177Z</updated>
     
@@ -288,17 +288,17 @@ list1 -- list2
     
     </summary>
     
-      <category term="Elixir" scheme="http://yoursite.com/categories/Elixir/"/>
+      <category term="Elixir" scheme="http://gobue.com/categories/Elixir/"/>
     
     
-      <category term="Elixir" scheme="http://yoursite.com/tags/Elixir/"/>
+      <category term="Elixir" scheme="http://gobue.com/tags/Elixir/"/>
     
   </entry>
   
   <entry>
     <title>MarkdownPad工具写GitHub博客</title>
-    <link href="http://yoursite.com/2016/06/23/MarkdownPad%E5%B7%A5%E5%85%B7%E5%86%99GitHub%E5%8D%9A%E5%AE%A2/"/>
-    <id>http://yoursite.com/2016/06/23/MarkdownPad工具写GitHub博客/</id>
+    <link href="http://gobue.com/2016/06/23/MarkdownPad%E5%B7%A5%E5%85%B7%E5%86%99GitHub%E5%8D%9A%E5%AE%A2/"/>
+    <id>http://gobue.com/2016/06/23/MarkdownPad工具写GitHub博客/</id>
     <published>2016-06-23T13:50:06.000Z</published>
     <updated>2016-06-23T14:27:44.991Z</updated>
     
@@ -337,17 +337,17 @@ GBPduHjWfJU1mZqcPM3BikjYKF6xKhlKIys3i1MU2eJHqWGImDHzWdD6xhMNLGVpbP2M5SN6bnxn2kSE
     
     </summary>
     
-      <category term="初写博客" scheme="http://yoursite.com/categories/%E5%88%9D%E5%86%99%E5%8D%9A%E5%AE%A2/"/>
+      <category term="初写博客" scheme="http://gobue.com/categories/%E5%88%9D%E5%86%99%E5%8D%9A%E5%AE%A2/"/>
     
     
-      <category term="Markdown" scheme="http://yoursite.com/tags/Markdown/"/>
+      <category term="Markdown" scheme="http://gobue.com/tags/Markdown/"/>
     
   </entry>
   
   <entry>
     <title>用markdown的语法写博客</title>
-    <link href="http://yoursite.com/2016/06/19/%E7%94%A8markdown%E7%9A%84%E8%AF%AD%E6%B3%95%E5%86%99%E5%8D%9A%E5%AE%A2/"/>
-    <id>http://yoursite.com/2016/06/19/用markdown的语法写博客/</id>
+    <link href="http://gobue.com/2016/06/19/%E7%94%A8markdown%E7%9A%84%E8%AF%AD%E6%B3%95%E5%86%99%E5%8D%9A%E5%AE%A2/"/>
+    <id>http://gobue.com/2016/06/19/用markdown的语法写博客/</id>
     <published>2016-06-19T13:31:06.000Z</published>
     <updated>2016-06-23T14:01:55.759Z</updated>
     
@@ -384,17 +384,17 @@ GBPduHjWfJU1mZqcPM3BikjYKF6xKhlKIys3i1MU2eJHqWGImDHzWdD6xhMNLGVpbP2M5SN6bnxn2kSE
     
     </summary>
     
-      <category term="初写博客" scheme="http://yoursite.com/categories/%E5%88%9D%E5%86%99%E5%8D%9A%E5%AE%A2/"/>
+      <category term="初写博客" scheme="http://gobue.com/categories/%E5%88%9D%E5%86%99%E5%8D%9A%E5%AE%A2/"/>
     
     
-      <category term="Markdown" scheme="http://yoursite.com/tags/Markdown/"/>
+      <category term="Markdown" scheme="http://gobue.com/tags/Markdown/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="http://yoursite.com/2016/06/19/hello-world/"/>
-    <id>http://yoursite.com/2016/06/19/hello-world/</id>
+    <link href="http://gobue.com/2016/06/19/hello-world/"/>
+    <id>http://gobue.com/2016/06/19/hello-world/</id>
     <published>2016-06-19T01:02:18.132Z</published>
     <updated>2016-06-22T12:46:44.988Z</updated>
     
