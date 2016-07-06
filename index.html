@@ -256,6 +256,396 @@
             
               
                 
+                <a class="post-title-link" href="/2016/07/06/Elixir-散列表、散列字典、关键字列表、集合与结构体/" itemprop="url">
+                  Elixir-散列表、散列字典、关键字列表、集合与结构体
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-07-06T22:11:57+08:00" content="2016-07-06">
+              2016-07-06
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Elixir/" itemprop="url" rel="index">
+                    <span itemprop="name">Elixir</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/07/06/Elixir-散列表、散列字典、关键字列表、集合与结构体/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/06/Elixir-散列表、散列字典、关键字列表、集合与结构体/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="字典"><a href="#字典" class="headerlink" title="字典"></a>字典</h2><p>散列表和散列字典都实现了 <code>Dict</code> 的行为。</p>
+<p>关键字模块也实现了，但是关键字列表允许出现重复的值，但是要用 <code>Keyword</code> 模块才能访问。</p>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">defmodule</span> <span class="title">Demo</span></span> <span class="keyword">do</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">values</span></span>(dict), <span class="symbol">do:</span> dict |&gt; Dict.values |&gt; Enum.sum </span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">iex&gt; hd = [<span class="symbol">one:</span> <span class="number">1</span>,<span class="symbol">two:</span> <span class="number">2</span>,<span class="symbol">three:</span> <span class="number">3</span>] |&gt; Enum.into HashDict.new</span><br><span class="line"><span class="comment">#HashDict&lt;[two: 2, one: 1, three: 3]&gt;</span></span><br><span class="line">iex&gt; IO.puts Demo.values(hd)</span><br><span class="line"><span class="number">6</span></span><br><span class="line"><span class="symbol">:ok</span></span><br></pre></td></tr></table></figure>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/07/06/Elixir-散列表、散列字典、关键字列表、集合与结构体/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/07/06/Elixir-列表与递归/" itemprop="url">
+                  Elixir-列表与递归
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-07-06T22:11:44+08:00" content="2016-07-06">
+              2016-07-06
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Elixir/" itemprop="url" rel="index">
+                    <span itemprop="name">Elixir</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/07/06/Elixir-列表与递归/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/06/Elixir-列表与递归/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <blockquote class="blockquote-center"><p><strong>递归</strong> 才是处理列表的最佳工具。</p>
+</blockquote>
+<h2 id="头部和尾部"><a href="#头部和尾部" class="headerlink" title="头部和尾部"></a>头部和尾部</h2><p>列表可以通过管道运算符 <code>|</code> 来分隔头部和尾部。</p>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">iex&gt; [head | tail] = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line">iex&gt; head</span><br><span class="line"><span class="number">1</span></span><br><span class="line">iex&gt; tail</span><br><span class="line">[<span class="number">2</span>, <span class="number">3</span>]</span><br></pre></td></tr></table></figure>
+<ul>
+<li>空列表长度为 <code>0</code></li>
+<li>列表长度等于列表尾部长度 + 1</li>
+</ul>
+<h2 id="递归计算列表长度"><a href="#递归计算列表长度" class="headerlink" title="递归计算列表长度"></a>递归计算列表长度</h2><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">defmodule</span> <span class="title">Demo</span></span> <span class="keyword">do</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">len</span></span>([]), <span class="symbol">do:</span> <span class="number">0</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">len</span></span>([_head | tail]), <span class="symbol">do:</span> len(tail) + <span class="number">1</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">iex&gt; Demo.len [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br><span class="line"><span class="number">5</span></span><br></pre></td></tr></table></figure>
+<p><code>head变量没有被用到，可以使用_开头的变量名来消除编译警告（_head）。</code><br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/07/06/Elixir-列表与递归/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/07/06/Elixir-模块与命名函数/" itemprop="url">
+                  Elixir-模块与命名函数
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-07-06T22:11:23+08:00" content="2016-07-06">
+              2016-07-06
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Elixir/" itemprop="url" rel="index">
+                    <span itemprop="name">Elixir</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/07/06/Elixir-模块与命名函数/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/06/Elixir-模块与命名函数/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>上节接触到了匿名函数，这次了解下命名函数。</p>
+<p><code>Elixir</code> 的命名函数必须写在模块里。</p>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><p>定义模块</p>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">defmodule</span> <span class="title">Demo</span></span> <span class="keyword">do</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">double</span></span>(n) <span class="keyword">do</span> </span><br><span class="line">        n * <span class="number">2</span> </span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<p><strong>通常单行使用do:语法，多行使用do…end语法。</strong></p>
+<p>命令提示符/终端时候用 <code>iex</code> + 文件<br>加载模块，<code>iex</code>模式下用 <code>c</code> + 文件</p>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">iex&gt; c <span class="string">"E:\\Elixir_workspace\\hello.exs"</span></span><br><span class="line">iex&gt; Demo.double <span class="number">5</span> </span><br><span class="line"><span class="number">10</span></span><br></pre></td></tr></table></figure>
+<h2 id="函数的模式匹配"><a href="#函数的模式匹配" class="headerlink" title="函数的模式匹配"></a>函数的模式匹配</h2><p>看示例：求 <code>n</code> 的阶乘 （递归）</p>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">defmodule</span> <span class="title">Demo</span></span> <span class="keyword">do</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">of</span></span>(<span class="number">0</span>), <span class="symbol">do:</span> <span class="number">1</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">of</span></span>(n), <span class="symbol">do:</span> n * of(n-<span class="number">1</span>)</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">iex&gt; Demo.of <span class="number">5</span></span><br><span class="line"><span class="number">120</span></span><br></pre></td></tr></table></figure>
+<p>有一点要注意，子句顺序不同会产生不同的结果。<code>Elixir</code>会自上而下依次尝试，执行最先匹配的一项。</p>
+<p>所以如果上述 <code>def</code> 位置交换将会行不通；第一个定义总是匹配，而第二个永远不会被调用。<br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/07/06/Elixir-模块与命名函数/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/06/29/Elixir-匿名函数/" itemprop="url">
                   Elixir-匿名函数
                 </a>
@@ -1159,7 +1549,7 @@ end
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">7</span>
+              <span class="site-state-item-count">10</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
